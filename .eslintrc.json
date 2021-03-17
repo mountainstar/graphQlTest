@@ -1,0 +1,117 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["prettier", "no-only-tests", "react-hooks"],
+  "env": {
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "Image": true,
+    "Blob": true
+  },
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "rules": {
+    "array-callback-return": "warn",
+    "eqeqeq": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "src/setupTests.js",
+          "**/*.spec.js",
+          "*.config.js",
+          "**/**/*.spec.jsx"
+        ]
+      }
+    ],
+
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/media-has-caption": "off",
+    "no-console": "error",
+    "no-continue": "error",
+    "no-nested-ternary": "error",
+    "no-restricted-globals": ["error", "event", "fdescribe"],
+    "no-underscore-dangle": "error",
+    "no-use-before-define": ["error", {"functions": true, "variables": true}],
+    "no-var": "error",
+    "no-return-assign": ["error", "except-parens"],
+    "no-only-tests/no-only-tests": "error",
+    "prettier/prettier": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": "off",
+    "react/static-property-placement": "off",
+    "react/state-in-constructor": "off",
+    "react/no-typos": "off",
+    "react/prefer-stateless-function": [
+      "error",
+      {"ignorePureComponents": true}
+    ],
+    "react/prop-types": [
+      "error",
+      {
+        "skipUndeclared": true,
+        "ignore": [
+          "classes",
+          "width",
+          "theme",
+          "className",
+          "match",
+          "logger",
+          "currentUser",
+          "snackbar",
+          "reload",
+          "setUrlState",
+          "urlState",
+          "style"
+        ]
+      }
+    ],
+    "react/prefer-es6-class": ["error", "always"],
+
+    "react/destructuring-assignment": [
+      "off",
+      "always",
+      {"ignoreClassFields": true}
+    ],
+    "react/display-name": "warn",
+    "react/jsx-boolean-value": ["error", "never"],
+    "react/jsx-no-undef": "error",
+    "react/no-did-update-set-state": "off",
+    "react/no-did-mount-set-state": "off",
+    "react/no-multi-comp": "error",
+    "react/no-unknown-property": "error",
+    "react/no-unused-prop-types": "off",
+    "react/no-access-state-in-setstate": "error",
+    "react/forbid-foreign-prop-types": "error",
+    "strict": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["src/shared/**/index.jsx"],
+      "rules": {
+        "react/prop-types": [
+          "error",
+          {
+            "skipUndeclared": false,
+            "ignore": [
+              "classes",
+              "width",
+              "theme",
+              "className",
+              "logger",
+              "snackbar",
+              "setUrlState",
+              "urlState",
+              "style"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

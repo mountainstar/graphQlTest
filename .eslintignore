@@ -1,0 +1,17 @@
+build
+coverage
+node_modules
+src/_buildInfo.js
+package.json
+
+#app entry points
+webpack.config.js
+index.js
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
